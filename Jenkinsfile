@@ -54,7 +54,7 @@ pipeline {
 
         stage('lancement du build  pour créer l\'image') {
             steps {
-                build job: 'BuildJavaImage', parameters: [string(value: 'openjdk', name: 'image'), string(value: '17-jdk-slim', name: 'tag'), string(value: 'verkeur08/ms-register', name: 'newImage'), string(value: 'com.example', name: 'groupId'), string(value: 'microservice-register', name: 'artifactId')]
+                build job: 'BuildJavaImage', parameters: [string(value: 'openjdk', name: 'image'), string(value: '17-jdk-slim', name: 'tag'), string(value: 'verkeur08/ms-register', name: 'newImage'), string(value: 'com.example', name: 'groupId'), string(value: 'microservice-register', name: 'artifactId'), string(value: '8761', name: 'exposePort')]
             }
         }
 
